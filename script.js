@@ -1,4 +1,137 @@
 // =========================================================
+// OWNER LOGIN + EDIT MODE
+// -----------------------------------------------------------
+// IMPORTANT (read this before changing the password below):
+// This site is hosted on GitHub Pages, which only serves files —
+// there is no server or database. So this "login" only checks the
+// password inside THIS file, and any edits (price text, replacement
+// photos) are saved in the browser's own storage (localStorage) —
+// meaning edits only show up again on the SAME browser/device that
+// made them. Good enough for a demo or personal use; if you want
+// every visitor to see the same saved edits, you'd need a real
+// backend (ask about this any time).
+// =========================================================
+
+const OWNER_PASSWORD = 'naiposha2026'; // <-- change this to your own password
+
+const ownerLockBtn   = document.getElementById('ownerLockBtn');
+const ownerBanner    = document.getElementById('ownerBanner');
+const ownerLogoutBtn = document.getElementById('ownerLogoutBtn');
+const loginModal     = document.getElementById('loginModal');
+const loginModalClose= document.getElementById('loginModalClose');
+const loginForm      = document.getElementById('loginForm');
+const loginError     = document.getElementById('loginError');
+
+// --- Open / close the login modal ---
+ownerLockBtn.addEventListener('click', () => { loginModal.hidden = false; });
+loginModalClose.addEventListener('click', () => { loginModal.hidden = true; });
+
+// --- Check the password when the login form is submitted ---
+loginForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // stop the page from reloading
+  const typed = document.getElementById('ownerPassword').value;
+  if (typed === OWNER_PASSWORD) {
+    sessionStorage.setItem('naiposhaOwner', 'true'); // stays logged in until tab closes
+    loginModal.hidden = true;
+    loginError.hidden = true;
+    loginForm.reset();
+    enableOwnerMode();
+  } else {
+    loginError.hidden = false;
+  }
+});
+
+// --- Log out ---
+ownerLogoutBtn.addEventListener('click', () => {
+  sessionStorage.removeItem('naiposhaOwner');
+  disableOwnerMode();
+});
+
+function enableOwnerMode() {
+  document.body.classList.add('owner-mode');
+  ownerBanner.hidden = false;
+
+  // Make every price span editable directly on the page
+  document.querySelectorAll('.owner-editable-text').forEach(el => {
+    el.contentEditable = 'true';
+    // Save to localStorage whenever the owner finishes editing a price
+    el.addEventListener('blur', () => {
+      const key = 'price-' + getElementPath(el);
+      localStorage.setItem(key, el.textContent);
+    });
+  });
+
+  // Make every product/gallery image clickable to replace it
+  document.querySelectorAll('.owner-editable-img').forEach(img => {
+    img.addEventListener('click', () => triggerImageUpload(img));
+  });
+}
+
+function disableOwnerMode() {
+  document.body.classList.remove('owner-mode');
+  ownerBanner.hidden = true;
+  document.querySelectorAll('.owner-editable-text').forEach(el => {
+    el.contentEditable = 'false';
+  });
+}
+
+// Give each editable element a unique "path" so we can find it again next visit
+function getElementPath(el) {
+  const all = Array.from(document.querySelectorAll('.owner-editable-text'));
+  return all.indexOf(el);
+}
+function getImagePath(img) {
+  const all = Array.from(document.querySelectorAll('.owner-editable-img'));
+  return all.indexOf(img);
+}
+
+// Opens the device's file picker, then converts the chosen photo into
+// a Base64 text string so it can be stored in localStorage and reloaded later
+function triggerImageUpload(img) {
+  const fileInput = document.createElement('input');
+  fileInput.type = 'file';
+  fileInput.accept = 'image/*';
+  fileInput.addEventListener('change', () => {
+    const file = fileInput.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      img.src = reader.result;
+      const key = 'img-' + getImagePath(img);
+      localStorage.setItem(key, reader.result);
+    };
+    reader.readAsDataURL(file);
+  });
+  fileInput.click();
+}
+
+// --- On page load: restore any saved edits, and stay logged in if applicable ---
+document.querySelectorAll('.owner-editable-text').forEach((el, i) => {
+  const saved = localStorage.getItem('price-' + i);
+  if (saved) el.textContent = saved;
+});
+document.querySelectorAll('.owner-editable-img').forEach((img, i) => {
+  const saved = localStorage.getItem('img-' + i);
+  if (saved) img.src = saved;
+});
+if (sessionStorage.getItem('naiposhaOwner') === 'true') {
+  enableOwnerMode();
+}
+
+// =========================================================
+// 0. HERO SLIDESHOW (auto-rotating fade)
+// =========================================================
+const heroSlides = document.querySelectorAll('#heroSlideshow .hero-slide');
+if (heroSlides.length > 1) {
+  let currentSlide = 0;
+  setInterval(() => {
+    heroSlides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % heroSlides.length;
+    heroSlides[currentSlide].classList.add('active');
+  }, 4000); // change photo every 4 seconds
+}
+
+// =========================================================
 // 1. MOBILE NAVIGATION TOGGLE
 // =========================================================
 const navToggle = document.getElementById('navToggle');
