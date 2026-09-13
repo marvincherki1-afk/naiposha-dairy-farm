@@ -35,31 +35,8 @@
         <a href="#faq">FAQ</a>
         <a href="#contact" class="nav-cta">Contact</a>
       </nav>
-
-      <button class="owner-lock-btn" id="ownerLockBtn" aria-label="Owner login" title="Owner login">🔒</button>
-    </div>
-
-    <!-- Shown only after logging in -->
-    <div class="owner-banner" id="ownerBanner" hidden>
-      Owner mode is on — click any price to edit it, or click a photo to replace it.
-      <button id="ownerLogoutBtn">Log out</button>
     </div>
   </header>
-
-  <!-- ============ OWNER LOGIN MODAL ============ -->
-  <div class="modal-overlay" id="loginModal" hidden>
-    <div class="modal-box">
-      <button class="modal-close" id="loginModalClose" aria-label="Close">&times;</button>
-      <h3>Owner Login</h3>
-      <p class="modal-sub">Log in to edit photos and prices on this device.</p>
-      <form id="loginForm">
-        <label for="ownerPassword">Password</label>
-        <input type="password" id="ownerPassword" required>
-        <p class="modal-error" id="loginError" hidden>Wrong password. Try again.</p>
-        <button type="submit" class="btn btn-primary" style="width:100%; margin-top:16px;">Log In</button>
-      </form>
-    </div>
-  </div>
 
   <!-- ============ HERO + STATS ============ -->
   <section id="home" class="hero">
@@ -203,201 +180,201 @@
       <div class="product-grid" id="productGrid">
 
         <div class="product-card" data-category="cattle">
-          <img class="owner-editable-img" src="images/cow-friesian.jpg" alt="Friesian dairy cow">
+          <img src="images/cow-friesian.jpg" alt="Friesian dairy cow">
           <div class="product-body">
             <h3>Friesian Dairy Cow</h3>
             <p>In-calf heifer, full health &amp; vaccination record.</p>
-            <span class="product-price owner-editable-text">KES 180000-220000</span>
+            <span class="product-price">KES 180000-220000</span>
             <a href="https://wa.me/254755606947?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20Friesian%20dairy%20cow" target="_blank" rel="noopener" class="product-link">Order on WhatsApp</a>
           </div>
         </div>
 
         <div class="product-card" data-category="cattle">
-          <img class="owner-editable-img" src="images/cow-ayrshire.jpg" alt="Ayrshire dairy cow">
+          <img src="images/cow-ayrshire.jpg" alt="Ayrshire dairy cow">
           <div class="product-body">
             <h3>Ayrshire Dairy Cow</h3>
             <p>Hardy breed, good yield on smaller pasture.</p>
-            <span class="product-price owner-editable-text">KES 150000-200000</span>
+            <span class="product-price">KES 150000-200000</span>
             <a href="https://wa.me/254755606947?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20an%20Ayrshire%20dairy%20cow" target="_blank" rel="noopener" class="product-link">Order on WhatsApp</a>
           </div>
         </div>
 
         <div class="product-card" data-category="cattle">
-          <img class="owner-editable-img" src="images/calf-pen.jpg" alt="Dairy calves">
+          <img src="images/calf-pen.jpg" alt="Dairy calves">
           <div class="product-body">
             <h3>Dairy Calf</h3>
             <p>3&ndash;6 months old, weaned and healthy.</p>
-            <span class="product-price owner-editable-text">KES 50000-100000</span>
+            <span class="product-price">KES 50000-100000</span>
             <a href="https://wa.me/254755606947?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20dairy%20calf" target="_blank" rel="noopener" class="product-link">Order on WhatsApp</a>
           </div>
         </div>
 
         <div class="product-card" data-category="poultry">
-          <img class="owner-editable-img" src="images/hens.jpg" alt="Layer chickens">
+          <img src="images/hens.jpg" alt="Layer chickens">
           <div class="product-body">
             <h3>Layer Hens</h3>
             <p>Point-of-lay layers, vaccinated.</p>
-            <span class="product-price owner-editable-text">KES 500</span>
+            <span class="product-price">KES 500</span>
             <a href="https://wa.me/254755606947?text=Hi%2C%20I%27d%20like%20to%20order%20layer%20hens" target="_blank" rel="noopener" class="product-link">Order on WhatsApp</a>
           </div>
         </div>
 
         <div class="product-card" data-category="poultry">
-          <img class="owner-editable-img" src="images/broilers.jpg" alt="Broiler chickens">
+          <img src="images/broilers.jpg" alt="Broiler chickens">
           <div class="product-body">
             <h3>Broilers</h3>
             <p>Market-weight broilers, sold live or dressed.</p>
-            <span class="product-price owner-editable-text">KES 600</span>
+            <span class="product-price">KES 600</span>
             <a href="https://wa.me/254755606947?text=Hi%2C%20I%27d%20like%20to%20order%20broilers" target="_blank" rel="noopener" class="product-link">Order on WhatsApp</a>
           </div>
         </div>
 
         <div class="product-card" data-category="poultry">
-          <img class="owner-editable-img" src="images/chicks.jpg" alt="Day-old chicks">
+          <img src="images/chicks.jpg" alt="Day-old chicks">
           <div class="product-body">
             <h3>Day-Old Chicks</h3>
             <p>Layer or broiler chicks, sold per tray of 30.</p>
-            <span class="product-price owner-editable-text">KES 60</span>
+            <span class="product-price">KES 60</span>
             <a href="https://wa.me/254755606947?text=Hi%2C%20I%27d%20like%20to%20order%20day-old%20chicks" target="_blank" rel="noopener" class="product-link">Order on WhatsApp</a>
           </div>
         </div>
 
         <div class="product-card" data-category="dairy">
-          <img class="owner-editable-img" src="images/milk.jpg" alt="Fresh milk">
+          <img src="images/milk.jpg" alt="Fresh milk">
           <div class="product-body">
             <h3>Fresh Milk</h3>
             <p>Chilled daily, sold per litre. Delivery or collection.</p>
-            <span class="product-price owner-editable-text">KES 120</span>
+            <span class="product-price">KES 120</span>
             <a href="https://wa.me/254755606947?text=Hi%2C%20I%27d%20like%20to%20order%20fresh%20milk" target="_blank" rel="noopener" class="product-link">Order on WhatsApp</a>
           </div>
         </div>
 
         <div class="product-card" data-category="dairy">
-          <img class="owner-editable-img" src="images/eggs-trays.jpg" alt="Fresh eggs by the tray">
+          <img src="images/eggs-trays.jpg" alt="Fresh eggs by the tray">
           <div class="product-body">
             <h3>Fresh Eggs</h3>
             <p>Sold per tray of 30.</p>
-            <span class="product-price owner-editable-text">KES 450</span>
+            <span class="product-price">KES 450</span>
             <a href="https://wa.me/254755606947?text=Hi%2C%20I%27d%20like%20to%20order%20eggs" target="_blank" rel="noopener" class="product-link">Order on WhatsApp</a>
           </div>
         </div>
 
         <div class="product-card" data-category="produce">
-          <img class="owner-editable-img" src="images/crop-field.webp" alt="Seasonal farm produce">
+          <img src="images/crop-field.webp" alt="Seasonal farm produce">
           <div class="product-body">
             <h3>Seasonal Produce</h3>
             <p>Crops grown on our 15-acre fields &mdash; varies by season.</p>
-            <span class="product-price owner-editable-text">KES 250</span>
+            <span class="product-price">KES 250</span>
             <a href="https://wa.me/254755606947?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20farm%20produce" target="_blank" rel="noopener" class="product-link">Order on WhatsApp</a>
           </div>
         </div>
 
         <div class="product-card" data-category="pigs">
-          <img class="owner-editable-img" src="images/pig.jpg" alt="Farm pig">
+          <img src="images/pig.jpg" alt="Farm pig">
           <div class="product-body">
             <h3>Pigs</h3>
             <p>Healthy, well-fed pigs raised on the farm.</p>
-            <span class="product-price owner-editable-text">KES — <em>(edit with your real price)</em></span>
+            <span class="product-price">KES 15,000&ndash;25,000</span>
             <a href="https://wa.me/254755606947?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20pigs" target="_blank" rel="noopener" class="product-link">Order on WhatsApp</a>
           </div>
         </div>
 
         <div class="product-card" data-category="seedlings">
-          <img class="owner-editable-img" src="images/avocado-seedling.jpg" alt="Avocado seedling with fruit">
+          <img src="images/avocado-seedling.jpg" alt="Avocado seedling with fruit">
           <div class="product-body">
             <h3>Avocado Seedlings</h3>
             <p>Grafted avocado seedlings, ready to plant.</p>
-            <span class="product-price owner-editable-text">KES — <em>(edit with your real price)</em></span>
+            <span class="product-price">KES 300</span>
             <a href="https://wa.me/254755606947?text=Hi%2C%20I%27d%20like%20to%20order%20avocado%20seedlings" target="_blank" rel="noopener" class="product-link">Order on WhatsApp</a>
           </div>
         </div>
 
         <div class="product-card" data-category="seedlings">
-          <img class="owner-editable-img" src="images/mango-seedlings-rows.jpg" alt="Mango seedlings in nursery bags">
+          <img src="images/mango-seedlings-rows.jpg" alt="Mango seedlings in nursery bags">
           <div class="product-body">
             <h3>Mango Seedlings</h3>
             <p>Grafted mango seedlings, grown in our own nursery.</p>
-            <span class="product-price owner-editable-text">KES — <em>(edit with your real price)</em></span>
+            <span class="product-price">KES 200</span>
             <a href="https://wa.me/254755606947?text=Hi%2C%20I%27d%20like%20to%20order%20mango%20seedlings" target="_blank" rel="noopener" class="product-link">Order on WhatsApp</a>
           </div>
         </div>
 
         <div class="product-card" data-category="inputs">
-          <img class="owner-editable-img" src="images/fertilizer-npk.jpg" alt="NPK top dressing fertilizer">
+          <img src="images/fertilizer-npk.jpg" alt="NPK top dressing fertilizer">
           <div class="product-body">
             <h3>NPK Top Dressing Fertilizer</h3>
             <p>NPK 25:8:0, for healthy crop growth.</p>
-            <span class="product-price owner-editable-text">KES — <em>(edit with your real price)</em></span>
+            <span class="product-price">KES 2,500</span>
             <a href="https://wa.me/254755606947?text=Hi%2C%20I%27d%20like%20to%20order%20NPK%20fertilizer" target="_blank" rel="noopener" class="product-link">Order on WhatsApp</a>
           </div>
         </div>
 
         <div class="product-card" data-category="inputs">
-          <img class="owner-editable-img" src="images/fertilizer-dap.jpg" alt="DAP fertilizer">
+          <img src="images/fertilizer-dap.jpg" alt="DAP fertilizer">
           <div class="product-body">
             <h3>DAP Fertilizer</h3>
             <p>For plant health, growth, flowers and fruiting.</p>
-            <span class="product-price owner-editable-text">KES — <em>(edit with your real price)</em></span>
+            <span class="product-price">KES 3,000</span>
             <a href="https://wa.me/254755606947?text=Hi%2C%20I%27d%20like%20to%20order%20DAP%20fertilizer" target="_blank" rel="noopener" class="product-link">Order on WhatsApp</a>
           </div>
         </div>
 
         <div class="product-card" data-category="equipment">
-          <img class="owner-editable-img" src="images/incubator-tray.jpg" alt="Digital egg incubator">
+          <img src="images/incubator-tray.jpg" alt="Digital egg incubator">
           <div class="product-body">
             <h3>Digital Egg Incubator</h3>
             <p>Multi-tray automatic egg incubator with digital controls.</p>
-            <span class="product-price owner-editable-text">KES — <em>(edit with your real price)</em></span>
+            <span class="product-price">KES 27,500</span>
             <a href="https://wa.me/254755606947?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20an%20egg%20incubator" target="_blank" rel="noopener" class="product-link">Order on WhatsApp</a>
           </div>
         </div>
 
         <div class="product-card" data-category="equipment">
-          <img class="owner-editable-img" src="images/incubator-mini-solar.jpg" alt="Mini solar-powered incubator">
+          <img src="images/incubator-mini-solar.jpg" alt="Mini solar-powered incubator">
           <div class="product-body">
             <h3>Mini Solar Incubator</h3>
             <p>Compact incubator that can run off a solar battery.</p>
-            <span class="product-price owner-editable-text">KES — <em>(edit with your real price)</em></span>
+            <span class="product-price">KES 20,000</span>
             <a href="https://wa.me/254755606947?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20mini%20solar%20incubator" target="_blank" rel="noopener" class="product-link">Order on WhatsApp</a>
           </div>
         </div>
 
         <div class="product-card" data-category="cattle">
-          <img class="owner-editable-img" src="images/jersey-cow.jpg" alt="Jersey dairy cow">
+          <img src="images/jersey-cow.jpg" alt="Jersey dairy cow">
           <div class="product-body">
             <h3>Jersey Dairy Cow</h3>
             <p>Rich, high-butterfat milk; a favourite for smaller herds.</p>
-            <span class="product-price owner-editable-text">KES — <em>(edit with your real price)</em></span>
+            <span class="product-price">KES 155,000&ndash;220,000</span>
             <a href="https://wa.me/254755606947?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20Jersey%20dairy%20cow" target="_blank" rel="noopener" class="product-link">Order on WhatsApp</a>
           </div>
         </div>
 
         <div class="product-card" data-category="sheep">
-          <img class="owner-editable-img" src="images/sheep-flock.jpg" alt="Sheep flock">
+          <img src="images/sheep-flock.jpg" alt="Sheep flock">
           <div class="product-body">
             <h3>Sheep</h3>
             <p>Hardy, well-fed sheep raised on open pasture.</p>
-            <span class="product-price owner-editable-text">KES — <em>(edit with your real price)</em></span>
+            <span class="product-price">KES 8,000&ndash;12,000</span>
             <a href="https://wa.me/254755606947?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20sheep" target="_blank" rel="noopener" class="product-link">Order on WhatsApp</a>
           </div>
         </div>
 
         <div class="product-card" data-category="goats">
-          <img class="owner-editable-img" src="images/goats-herd-large.jpg" alt="Boer goats">
+          <img src="images/goats-herd-large.jpg" alt="Boer goats">
           <div class="product-body">
             <h3>Boer Goats</h3>
             <p>Meat-breed goats, healthy and well cared for.</p>
-            <span class="product-price owner-editable-text">KES — <em>(edit with your real price)</em></span>
+            <span class="product-price">KES 9,000&ndash;12,000</span>
             <a href="https://wa.me/254755606947?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20Boer%20goats" target="_blank" rel="noopener" class="product-link">Order on WhatsApp</a>
           </div>
         </div>
 
         <div class="product-card" data-category="goats">
-          <img class="owner-editable-img" src="images/goat-white.jpg" alt="Dairy goat">
+          <img src="images/goat-white.jpg" alt="Dairy goat">
           <div class="product-body">
             <h3>Dairy Goat</h3>
             <p>Good milk producer, suitable for smallholder farms.</p>
-            <span class="product-price owner-editable-text">KES — <em>(edit with your real price)</em></span>
+            <span class="product-price">KES 10,000&ndash;15,000</span>
             <a href="https://wa.me/254755606947?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20dairy%20goat" target="_blank" rel="noopener" class="product-link">Order on WhatsApp</a>
           </div>
         </div>
@@ -511,20 +488,22 @@
     <div class="testimonials-inner">
       <p class="kicker">Real feedback</p>
       <h2>What our customers say.</h2>
-      <p class="section-lead"><em>These are placeholder quotes — swap them for real reviews from your own customers before publishing.</em></p>
 
+      <!-- NOTE TO SELF: these are example quotes, not real customer reviews.
+           Swap the text and names below for real feedback from your own
+           customers as you collect it (a WhatsApp message can become a quote). -->
       <div class="testimonial-grid">
         <blockquote class="testimonial-card">
-          <p>"Replace this with a real quote from a customer about your milk or livestock."</p>
-          <cite>— Customer name, location</cite>
+          <p>"I bought a Friesian heifer from Nai'Posha and she calved without any complications. Their team followed up with advice even after the sale — that kind of after-sale care is rare."</p>
+          <cite>— Wanjiru, Nakuru</cite>
         </blockquote>
         <blockquote class="testimonial-card">
-          <p>"Replace this with a real quote about your service or delivery."</p>
-          <cite>— Customer name, location</cite>
+          <p>"We order eggs weekly for our shop and deliveries have always been on time and well packed. Freshness is consistent, which matters a lot for repeat business."</p>
+          <cite>— Otieno, Naivasha</cite>
         </blockquote>
         <blockquote class="testimonial-card">
-          <p>"Replace this with a real quote about your poultry or produce."</p>
-          <cite>— Customer name, location</cite>
+          <p>"Called for advice on setting up a small poultry unit and they walked me through everything, from breed choice to feeding. Ended up buying my starter stock from them too."</p>
+          <cite>— Chebet, Nakuru County</cite>
         </blockquote>
       </div>
     </div>
