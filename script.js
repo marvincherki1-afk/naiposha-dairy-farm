@@ -195,3 +195,20 @@ contactForm.addEventListener('submit', (event) => {
     `use the WhatsApp button above for a faster reply in the meantime.`;
   contactForm.reset();
 });
+
+// =========================================================
+// 9. SUBSCRIBE FORM
+// Static site — no backend yet, same as the contact form above.
+// To make this collect real emails, connect a service like
+// Mailchimp, Google Forms, or Formspree and point this form's
+// action at it.
+// =========================================================
+const subscribeForm = document.getElementById('subscribeForm');
+const subscribeStatus = document.getElementById('subscribeStatus');
+
+subscribeForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  subscribeStatus.textContent =
+    `Thanks for subscribing! (This form isn't connected to a mailing list yet.)`;
+  subscribeForm.reset();
+});

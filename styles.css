@@ -94,11 +94,16 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .hero-img-small { position: absolute; bottom: -36px; left: -36px; width: 160px; height: 160px; object-fit: cover; border-radius: var(--radius); border: 6px solid var(--cream); z-index: 2; }
 
 .stats-bar { background: var(--green-deep); margin-top: 90px; }
-.stats-inner { max-width: var(--max-width); margin: 0 auto; padding: 36px 24px; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 24px; }
+.stats-inner { max-width: var(--max-width); margin: 0 auto; padding: 36px 24px; display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center; }
+.stats-hours { color: var(--gold-wheat); font-weight: 600; font-size: 0.95rem; letter-spacing: 0.02em; }
+.stats-row { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 24px; width: 100%; }
 .stat-block { display: flex; flex-direction: column; align-items: center; text-align: center; color: var(--cream); }
 .stat-num { font-family: var(--font-display); font-size: 2.1rem; font-weight: 700; color: var(--gold-wheat); }
 .stat-label { font-size: 0.82rem; margin-top: 4px; opacity: 0.85; }
 .stat-label em { font-style: normal; opacity: 0.65; }
+
+.trust-badges { display: flex; flex-wrap: wrap; gap: 10px 20px; list-style: none; margin-top: 18px; padding: 0; }
+.trust-badges li { font-size: 0.82rem; font-weight: 600; color: var(--green-deep); }
 
 /* =========================================================
    6. ABOUT
@@ -268,6 +273,26 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 }
 .whatsapp-float:hover { transform: scale(1.08); }
 
+.call-float {
+  position: fixed;
+  bottom: 92px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--green-deep);
+  color: var(--cream);
+  padding: 10px 16px 10px 12px;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  z-index: 900;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: transform 0.15s ease;
+}
+.call-float:hover { transform: scale(1.05); }
+.call-float-label { white-space: nowrap; }
+
 /* =========================================================
    BACK TO TOP BUTTON
    ========================================================= */
@@ -336,6 +361,14 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .contact-info a { text-decoration: underline; }
 .contact-info em { font-style: normal; opacity: 0.6; font-size: 0.85rem; }
 
+.contact-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+
+.social-links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 24px; }
+.social-links a { color: var(--cream); font-weight: 600; font-size: 0.85rem; text-decoration: underline; opacity: 0.9; }
+.social-links a:hover { opacity: 1; }
+
+.contact-forms { display: flex; flex-direction: column; gap: 32px; }
+
 .contact-form { display: flex; flex-direction: column; gap: 6px; }
 .contact-form label { font-size: 0.85rem; font-weight: 600; margin-top: 14px; }
 .contact-form input, .contact-form textarea {
@@ -350,6 +383,20 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 }
 .contact-form input:focus, .contact-form textarea:focus { outline: 3px solid var(--gold-wheat); }
 .contact-form button { margin-top: 22px; align-self: flex-start; }
+
+.subscribe-form { border-top: 1px solid rgba(36, 64, 42, 0.15); padding-top: 24px; }
+.subscribe-form label { font-size: 0.95rem; font-weight: 700; color: var(--green-deep); }
+.subscribe-row { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+.subscribe-row input {
+  flex: 1;
+  min-width: 180px;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(36, 64, 42, 0.25);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+}
+.subscribe-row input:focus { outline: 3px solid var(--gold-wheat); }
 .form-status { margin-top: 14px; font-size: 0.9rem; color: var(--gold-wheat); }
 
 /* =========================================================
@@ -387,6 +434,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 140px; }
   .product-grid { grid-template-columns: 1fr; }
   .whatsapp-float { width: 50px; height: 50px; bottom: 16px; right: 16px; }
+  .call-float { bottom: 76px; right: 16px; width: 50px; height: 50px; padding: 0; justify-content: center; }
+  .call-float-label { display: none; }
   .back-to-top { width: 40px; height: 40px; bottom: 16px; right: 76px; }
   .lightbox-prev, .lightbox-next { width: 38px; height: 38px; }
 }

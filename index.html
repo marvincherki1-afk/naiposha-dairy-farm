@@ -42,7 +42,7 @@
   <section id="home" class="hero">
     <div class="hero-inner">
       <div class="hero-text">
-        <p class="kicker">Fresh dairy &amp; pedigree breeds</p>
+        <p class="kicker">Welcome to Nai'Posha Dairy Farm</p>
         <h1>From pasture to product, quality you can trust.</h1>
         <p class="hero-sub">
           Fresh milk, healthy pedigree dairy cattle, poultry, and crops &mdash;
@@ -53,6 +53,11 @@
           <a href="#products" class="btn btn-primary">View products</a>
           <a href="https://wa.me/254755606947?text=Hi%20Nai'Posha%2C%20I%27d%20like%20to%20enquire" class="btn btn-ghost" target="_blank" rel="noopener">WhatsApp us</a>
         </div>
+        <ul class="trust-badges">
+          <li>&#10003; Vaccinated</li>
+          <li>&#10003; Verified Pedigree</li>
+          <li>&#10003; Delivery Countrywide</li>
+        </ul>
       </div>
 
       <div class="hero-media">
@@ -66,21 +71,25 @@
       </div>
     </div>
 
-    <!-- Stats bar: placeholder numbers, clearly marked to edit -->
+    <!-- Stats bar -->
     <div class="stats-bar">
       <div class="stats-inner">
-        <div class="stat-block">
-          <span class="stat-num">— L</span>
-          <span class="stat-label">Litres of milk / day<br><em>(replace with your real figure)</em></span>
+        <p class="stats-hours">Open Monday &ndash; Saturday, 8:00 AM &ndash; 5:00 PM</p>
+        <div class="stats-row">
+          <div class="stat-block">
+            <span class="stat-num">150+</span>
+            <span class="stat-label">Litres of milk / day</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-num">250+</span>
+            <span class="stat-label">Cattle sold</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-num">120+</span>
+            <span class="stat-label">Repeat clients</span>
+          </div>
         </div>
-        <div class="stat-block">
-          <span class="stat-num">120+</span>
-          <span class="stat-label">Cattle in our herd</span>
-        </div>
-        <div class="stat-block">
-          <span class="stat-num">15</span>
-          <span class="stat-label">Acres under crop</span>
-        </div>
+        <a href="https://wa.me/254755606947?text=Hi%20Nai'Posha%2C%20I%27d%20like%20to%20order%2Fenquire" class="btn btn-primary" target="_blank" rel="noopener">Order / Enquire on WhatsApp</a>
       </div>
     </div>
   </section>
@@ -542,12 +551,15 @@
         </p>
 
         <div class="contact-info">
-          <p><strong>Phone / WhatsApp:</strong> <a href="tel:+254755606947">+254 755 606 947</a></p>
-          <p><strong>Email:</strong> info@naiposhadairyfarm.co.ke <em>(edit to your real email)</em></p>
-          <p><strong>Location:</strong> Dumpsite Road, Lakeview Ward, Naivasha, Nakuru County, Kenya</p>
+          <p><strong>Phone / WhatsApp:</strong> <a href="tel:+254755606947">0755 606 947</a></p>
+          <p><strong>Email:</strong> naiposhadairyfarm@gmail.com</p>
+          <p><strong>Location:</strong> Naivasha</p>
         </div>
 
-        <a href="https://wa.me/254755606947?text=Hi%20Nai'Posha%2C%20I%27d%20like%20to%20get%20in%20touch" class="btn btn-primary" target="_blank" rel="noopener" style="margin-top: 24px;">Chat on WhatsApp</a>
+        <div class="contact-actions">
+          <a href="https://wa.me/254755606947?text=Hi%20Nai'Posha%2C%20I%27d%20like%20to%20get%20in%20touch" class="btn btn-primary" target="_blank" rel="noopener">Chat on WhatsApp</a>
+          <a href="tel:+254755606947" class="btn btn-ghost">Call: 0755 606 947</a>
+        </div>
 
         <div class="map-embed">
           <iframe
@@ -556,21 +568,39 @@
             referrerpolicy="no-referrer-when-downgrade" title="Nai'Posha Dairy Farm location map">
           </iframe>
         </div>
+
+        <div class="social-links">
+          <a href="https://facebook.com/naiposhadairyfarm" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+          <a href="https://tiktok.com/@naiposhadairyfarm" target="_blank" rel="noopener" aria-label="TikTok">TikTok</a>
+          <a href="https://youtube.com/@naiposhadairyfarm" target="_blank" rel="noopener" aria-label="YouTube">YouTube</a>
+          <a href="https://instagram.com/naiposhadairyfarm" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+        </div>
       </div>
 
-      <form class="contact-form" id="contactForm">
-        <label for="name">Full name</label>
-        <input type="text" id="name" name="name" required>
+      <div class="contact-forms">
+        <form class="contact-form" id="contactForm">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required>
 
-        <label for="email">Email address</label>
-        <input type="email" id="email" name="email" required>
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" required>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
 
-        <button type="submit" class="btn btn-primary">Send message</button>
-        <p class="form-status" id="formStatus"></p>
-      </form>
+          <button type="submit" class="btn btn-primary">Send message</button>
+          <p class="form-status" id="formStatus"></p>
+        </form>
+
+        <form class="subscribe-form" id="subscribeForm">
+          <label for="subscribeEmail">Subscribe for stock alerts &amp; tips</label>
+          <div class="subscribe-row">
+            <input type="email" id="subscribeEmail" name="subscribeEmail" placeholder="Your email address" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </div>
+          <p class="form-status" id="subscribeStatus"></p>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -602,7 +632,13 @@
     <button class="lightbox-next" id="lightboxNext" aria-label="Next image">&#10095;</button>
   </div>
 
-  <!-- ============ FLOATING WHATSAPP BUTTON ============ -->
+  <!-- ============ FLOATING WHATSAPP + CALL BUTTONS ============ -->
+  <a href="tel:+254755606947" class="call-float" aria-label="Call us">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+      <path d="M6.6 10.8c1.4 2.8 3.7 5.1 6.5 6.5l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1l-2.3 2.3z"/>
+    </svg>
+    <span class="call-float-label">Tupigie Simu</span>
+  </a>
   <a href="https://wa.me/254755606947?text=Hi%20Nai'Posha%2C%20I%27d%20like%20to%20enquire"
      class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 32 32" fill="currentColor" width="28" height="28">
