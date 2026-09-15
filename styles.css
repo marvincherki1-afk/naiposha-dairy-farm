@@ -63,25 +63,26 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 /* =========================================================
    4. NAVIGATION
    ========================================================= */
-.nav { position: sticky; top: 0; z-index: 100; background: var(--cream); border-bottom: 1px solid rgba(36, 64, 42, 0.12); }
+.nav { position: sticky; top: 0; z-index: 100; background: var(--green-deep); border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
 .nav-inner { max-width: var(--max-width); margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
 .brand { display: flex; align-items: center; gap: 12px; }
-.brand-mark { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; background: var(--green-deep); color: var(--cream); font-family: var(--font-display); font-weight: 700; }
-.brand-logo { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
-.brand-name { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--green-deep); line-height: 1.2; }
+.brand-mark { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; background: var(--gold-wheat); color: var(--green-deep); font-family: var(--font-display); font-weight: 700; }
+.brand-logo { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--cream); }
+.brand-name { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--cream); line-height: 1.2; }
 .brand-name small { font-weight: 400; font-size: 0.75rem; }
-.nav-links { display: flex; align-items: center; gap: 24px; font-size: 0.92rem; font-weight: 500; }
-.nav-links a:hover { color: var(--green-mid); }
-.nav-cta { background: var(--green-deep); color: var(--cream) !important; padding: 8px 18px; border-radius: var(--radius); }
-.nav-cta:hover { background: var(--green-mid); }
+.nav-links { display: flex; align-items: center; gap: 24px; font-size: 0.92rem; font-weight: 500; color: var(--cream); }
+.nav-links a:hover { color: var(--gold-wheat); }
+.nav-cta { background: var(--gold-wheat); color: var(--green-deep) !important; padding: 8px 18px; border-radius: var(--radius); }
+.nav-cta:hover { background: #e0b246; }
 .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
-.nav-toggle span { width: 24px; height: 2px; background: var(--green-deep); }
+.nav-toggle span { width: 24px; height: 2px; background: var(--cream); }
 
 /* =========================================================
    5. HERO + STATS BAR
    ========================================================= */
 .hero-inner { max-width: var(--max-width); margin: 0 auto; padding: 72px 24px 0; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
-.hero-text h1 { font-size: clamp(2.1rem, 4vw, 3.2rem); color: var(--green-deep); margin-top: 8px; }
+.hero-text h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); color: var(--green-deep); margin-top: 8px; }
+.hero-tagline { font-size: clamp(1.1rem, 2vw, 1.4rem); color: var(--brown-soil); font-weight: 600; margin-top: 10px; }
 .hero-sub { margin-top: 20px; max-width: 46ch; color: #3d3f36; }
 .hero-actions { margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap; }
 .hero-media { position: relative; }
@@ -216,6 +217,21 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.2s ease; }
 .gallery-item:hover img { transform: scale(1.05); }
 .gallery-item.span-tall { grid-row: span 2; }
+
+/* =========================================================
+   11b. FARM VIDEOS
+   ========================================================= */
+.videos { background: var(--cream); }
+.videos-inner { max-width: var(--max-width); margin: 0 auto; padding: 80px 24px; }
+.videos-inner h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); color: var(--green-deep); margin-bottom: 40px; }
+.video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.video-card { background: var(--card-bg); border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(36, 64, 42, 0.12); }
+.video-card video { width: 100%; display: block; aspect-ratio: 9 / 16; object-fit: cover; background: #000; }
+.video-caption { padding: 12px 14px; font-size: 0.85rem; font-weight: 600; color: var(--green-deep); }
+
+@media (max-width: 900px) {
+  .video-grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
+}
 
 /* =========================================================
    GALLERY LIGHTBOX
@@ -444,8 +460,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   .nav-toggle { display: flex; }
   .nav-links {
     position: absolute; top: 100%; left: 0; right: 0;
-    background: var(--cream); flex-direction: column; align-items: flex-start;
-    gap: 0; padding: 8px 24px 20px; border-bottom: 1px solid rgba(36, 64, 42, 0.12);
+    background: var(--green-deep); flex-direction: column; align-items: flex-start;
+    gap: 0; padding: 8px 24px 20px; border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     display: none;
   }
   .nav-links.open { display: flex; }
