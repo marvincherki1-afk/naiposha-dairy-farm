@@ -439,7 +439,6 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 @media (max-width: 900px) {
   .hero-inner, .about-inner, .band-inner, .contact-inner { grid-template-columns: 1fr; }
   .band-inner.reverse { direction: ltr; }
-  .hero-media { order: -1; }
   .hero-img-small { display: none; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .product-grid { grid-template-columns: repeat(2, 1fr); }
