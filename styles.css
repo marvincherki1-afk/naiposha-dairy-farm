@@ -57,8 +57,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .btn-primary:hover { background: #b98a25; }
 .btn-ghost { border-color: var(--cream); color: var(--cream); }
 .btn-ghost:hover { background: rgba(246, 242, 231, 0.12); }
-.hero .btn-ghost { border-color: var(--green-deep); color: var(--green-deep); }
-.hero .btn-ghost:hover { background: rgba(36, 64, 42, 0.08); }
+.hero .btn-ghost { border-color: var(--cream); color: var(--cream); }
+.hero .btn-ghost:hover { background: rgba(246, 242, 231, 0.15); }
 
 /* =========================================================
    4. NAVIGATION
@@ -80,21 +80,37 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 /* =========================================================
    5. HERO + STATS BAR
    ========================================================= */
-.hero-inner { max-width: var(--max-width); margin: 0 auto; padding: 72px 24px 0; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
-.hero-text h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); color: var(--green-deep); margin-top: 8px; }
-.hero-tagline { font-size: clamp(1.1rem, 2vw, 1.4rem); color: var(--brown-soil); font-weight: 600; margin-top: 10px; }
-.hero-sub { margin-top: 20px; max-width: 46ch; color: #3d3f36; }
+.hero {
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(20, 31, 16, 0.72) 0%, rgba(20, 31, 16, 0.55) 45%, rgba(20, 31, 16, 0.85) 100%),
+    url('images/hero-bg-cattle.jpg') center / cover no-repeat;
+}
+.hero-inner { max-width: var(--max-width); margin: 0 auto; padding: 100px 24px 120px; }
+.hero-text { max-width: 640px; }
+.hero-text h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); color: var(--cream); margin-top: 8px; }
+.hero-tagline { font-size: clamp(1.1rem, 2vw, 1.4rem); color: var(--gold-wheat); font-weight: 600; margin-top: 10px; }
+.hero-sub { margin-top: 20px; max-width: 46ch; color: rgba(246, 242, 231, 0.9); }
 .hero-actions { margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap; }
-.hero-media { position: relative; }
-.hero-slideshow { position: relative; width: 100%; height: 480px; border-radius: var(--radius); overflow: hidden; }
+
+.hero-slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 260px;
+  margin-top: 48px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 4px solid rgba(246, 242, 231, 0.85);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
 .hero-slide {
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
   opacity: 0; transition: opacity 1.2s ease;
 }
 .hero-slide.active { opacity: 1; }
-.hero-img-small { position: absolute; bottom: -36px; left: -36px; width: 160px; height: 160px; object-fit: cover; border-radius: var(--radius); border: 6px solid var(--cream); z-index: 2; }
 
-.stats-bar { background: var(--green-deep); margin-top: 90px; }
+.stats-bar { background: var(--green-deep); }
 .stats-inner { max-width: var(--max-width); margin: 0 auto; padding: 36px 24px; display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center; }
 .stats-hours { color: var(--gold-wheat); font-weight: 600; font-size: 0.95rem; letter-spacing: 0.02em; }
 .stats-row { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 24px; width: 100%; }
@@ -104,7 +120,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .stat-label em { font-style: normal; opacity: 0.65; }
 
 .trust-badges { display: flex; flex-wrap: wrap; gap: 10px 20px; list-style: none; margin-top: 18px; padding: 0; }
-.trust-badges li { font-size: 0.82rem; font-weight: 600; color: var(--green-deep); }
+.trust-badges li { font-size: 0.82rem; font-weight: 600; color: var(--cream); }
 
 /* =========================================================
    6. ABOUT
@@ -437,9 +453,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
    17. RESPONSIVE RULES
    ========================================================= */
 @media (max-width: 900px) {
-  .hero-inner, .about-inner, .band-inner, .contact-inner { grid-template-columns: 1fr; }
+  .band-inner { grid-template-columns: 1fr; }
+  .about-inner, .contact-inner { grid-template-columns: 1fr; }
   .band-inner.reverse { direction: ltr; }
-  .hero-img-small { display: none; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .product-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonial-grid { grid-template-columns: 1fr; }
