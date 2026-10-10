@@ -1,0 +1,45 @@
+/* Nai'Posha green theme. Loaded AFTER styles.css so these rules win. */
+:root{--g9:#0f3d24;--g8:#14532d;--g7:#166534;--g1:#dcfce7;--g0:#f0fdf4;--wa:#25D366;--wa2:#1ebe5a}
+
+/* Navigation + footer */
+.nav,.site-footer{background:var(--g8)!important}
+.nav-links a,.site-footer a,.site-footer span,.footer-copy,.brand-name{color:#f0fdf4!important}
+.nav-cta{background:var(--wa)!important;color:#fff!important;border-radius:6px!important}
+
+/* Section backgrounds */
+.about,.band,.products,.services,.gallery,.videos,.testimonials,.faq{background:var(--g0)!important}
+.band-dark,.advisor,.contact{background:var(--g8)!important}
+.stats-bar{background:var(--g9)!important}
+
+/* Tint the hero photo green without removing it */
+.hero{box-shadow:inset 0 0 0 9999px rgba(20,83,45,.38)}
+
+/* Text colours */
+.about h2,.about p,.band h2,.band p,.band li,.products h2,.products-inner>p,.services h2,.services p,.services h3,
+.gallery h2,.videos h2,.video-caption,.testimonials h2,.faq h2,.faq-question,.faq-answer p,.kicker{color:var(--g9)!important}
+.band-dark h2,.band-dark p,.band-dark li,.band-dark label,.advisor h2,.contact h2,.contact p,.kicker-light,.advisor-result{color:#f0fdf4!important}
+.service-icon{color:var(--g7)!important}
+
+/* Cards (were gold) */
+.product-card,.testimonial-card,.faq-item,.video-card{background:var(--g1)!important;border-color:#86efac!important}
+.product-card h3,.product-card p,.testimonial-card p,.testimonial-card cite{color:var(--g9)!important}
+.product-price{color:var(--g7)!important;font-weight:700}
+.filter-tab{background:var(--g1)!important;color:var(--g9)!important;border:1px solid var(--g7)!important}
+.filter-tab.active,.filter-tab:hover{background:var(--g7)!important;color:#fff!important}
+
+/* Price lists inside product cards */
+.price-list{list-style:none;margin:.6rem 0;padding:0;font-size:.92rem}
+.price-list li{display:flex;justify-content:space-between;gap:.5rem;padding:.3rem 0;border-bottom:1px dashed #86efac;color:var(--g9)}
+.price-list b{color:var(--g7);white-space:nowrap}
+
+/* WhatsApp-style green rectangle buttons */
+.btn-primary,.cta-btn{display:inline-block;background:var(--wa)!important;color:#fff!important;border:0!important;
+  border-radius:6px!important;padding:12px 20px;font-weight:700;text-decoration:none;text-align:center;cursor:pointer}
+.btn-primary:hover,.cta-btn:hover{background:var(--wa2)!important}
+.btn-ghost{background:transparent!important;color:#fff!important;border:2px solid var(--wa)!important;border-radius:6px!important}
+.section-cta,.card-actions{display:flex;flex-wrap:wrap;gap:10px;margin:1.4rem 0 .6rem}
+.card-actions{flex-direction:column}
+.card-actions .cta-btn{padding:10px 14px;font-size:.9rem}
+.contact-strip{margin:.4rem 0 0;font-size:.95rem}
+.contact-strip a{font-weight:700;color:inherit;margin-left:.7rem;text-decoration:underline}
+.call-float,.whatsapp-float,.back-to-top{background:var(--wa)!important;color:#fff!important}
