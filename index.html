@@ -26,7 +26,7 @@
     "logo": "https://naiposhadairyfarm.co.ke/images/logo-512.png",
     "contactPoint": [
       {"@type": "ContactPoint", "telephone": "+254755606947", "contactType": "customer service"},
-      {"@type": "ContactPoint", "telephone": "+254794777055", "contactType": "customer service"}
+      {"@type": "ContactPoint", "telephone": "+254757243300", "contactType": "customer service"}
     ]
   }
   </script>
@@ -313,7 +313,16 @@
 
         <div class="product-card" data-category="sheep">
           <img src="images/sheep-flock.jpg" alt="Sheep flock">
-          <div class="product-body"><h3>Sheep</h3><p>Hardy sheep raised on open pasture.</p><span class="product-price">KES 8,000&ndash;12,000</span></div>
+          <div class="product-body">
+            <h3>Sheep</h3>
+            <ul class="price-list">
+              <li>Ram<b>KES 3,000</b></li>
+              <li>4 months<b>KES 4,500</b></li>
+              <li>6 months<b>KES 8,000</b></li>
+              <li>Matured<b>KES 13,000</b></li>
+              <li>Pregnant<b>KES 16,000</b></li>
+            </ul>
+          </div>
         </div>
 
         <div class="product-card" data-category="dairy">
@@ -553,7 +562,7 @@
 
         <div class="contact-info">
           <p><strong>Phone / WhatsApp:</strong> <a href="tel:+254755606947">0755 606 947</a></p>
-          <p><strong>Call / SMS:</strong> <a href="tel:+254794777055">0794 777 055</a></p>
+          <p><strong>Call / SMS:</strong> <a href="tel:+254757243300">0757 243 300</a></p>
           <p><strong>Email:</strong> naiposhadairyfarmltd@gmail.com</p>
           <p><strong>Location:</strong> Kinagop Road, Naivasha</p>
         </div>
@@ -641,7 +650,7 @@
   <!-- Adds the green buttons + Call/SMS line to every section and product card -->
   <script>
   (function () {
-    var WA = "254755606947", CALL1 = "+254755606947", CALL2 = "+254794777055";
+    var WA = "254755606947", CALL1 = "+254755606947", CALL2 = "+254757243300";
     function wa(m) { return "https://wa.me/" + WA + "?text=" + encodeURIComponent(m); }
     document.querySelectorAll("body > section").forEach(function (sec) {
       var t = sec.querySelector(".hero-text, .about-text, .band-text, .contact-text") || sec.firstElementChild;
@@ -654,7 +663,7 @@
         '<a class="cta-btn" href="' + view + '">View products</a>' +
         '<a class="cta-btn" href="tel:' + CALL1 + '">Call now</a></div>' +
         '<p class="contact-strip">Call / SMS: <a href="tel:' + CALL1 + '">0755 606 947</a>' +
-        '<a href="tel:' + CALL2 + '">0794 777 055</a><a href="sms:' + CALL2 + '">Send SMS</a></p>';
+        '<a href="tel:' + CALL2 + '">0757 243 300</a><a href="sms:' + CALL2 + '">Send SMS</a></p>';
       t.appendChild(box);
     });
     document.querySelectorAll(".product-card .product-body").forEach(function (b) {
